@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object NetworkModule {
 
-    const val BASE_URL = "YOUR END POINT IN HERE"
+    const val BASE_URL = "http://192.168.51.2/CodeIgniter/kartuKuning/index.php/"
 
     fun getOkHttp(): OkHttpClient {
         val logging = HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BASIC)

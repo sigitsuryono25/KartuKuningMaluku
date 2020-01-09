@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@drawable/ic_home_24px"
+        android:title="@string/home"
+        app:cnb_iconColor="@color/home" />
+
+    <item
+        android:id="@+id/layanan"
+        android:enabled="true"
+        android:icon="@drawable/ic_view_list_24px"
+        android:title="@string/layanan"
+        app:cnb_iconColor="@color/layanan" />
+
+    <item
+        android:id="@+id/berita"
+        android:enabled="true"
+        android:icon="@drawable/ic_chrome_reader_mode_24px"
+        android:title="@string/berita"
+        app:cnb_iconColor="@color/berita" />
+
+
+    <item
+        android:id="@+id/akun"
+        android:enabled="true"
+        android:icon="@drawable/ic_supervised_user_circle_24px"
+        android:title="@string/akun"
+        app:cnb_iconColor="@color/akun" />
+</menu>
