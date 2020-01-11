@@ -8,7 +8,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object NetworkModule {
 
-    const val BASE_URL = "http://192.168.51.2/CodeIgniter/kartuKuning/index.php/"
+    //    const val BASE_URL = "http://192.168.51.2/CodeIgniter/kartuKuning/index.php/"
+    const val BASE_URL = "http://disnakertrans-malukutengah.server4111.com/index.php/"
 
     fun getOkHttp(): OkHttpClient {
         val logging = HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BASIC)

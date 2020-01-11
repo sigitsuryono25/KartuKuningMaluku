@@ -3,11 +3,11 @@ package com.surelabs.auto.kartukuningmaluku.dashboard
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.surelabs.auto.kartukuningmaluku.R
-import com.surelabs.auto.kartukuningmaluku.dashboard.ui.akun.ProfileFragment
 import com.surelabs.auto.kartukuningmaluku.dashboard.ui.berita.BeritaFragment
 import com.surelabs.auto.kartukuningmaluku.dashboard.ui.home.HomeFragment
 import com.surelabs.auto.kartukuningmaluku.dashboard.ui.layanan.LayananFragment
 import com.surelabs.auto.kartukuningmaluku.dashboard.ui.lowker.LowkerFragment
+import com.surelabs.auto.kartukuningmaluku.login.ui.login.LoginFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar.*
 
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.akun -> {
                     titles.text = getString(R.string.akun)
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.container, ProfileFragment()).commit()
+                        .replace(R.id.container, LoginFragment()).commit()
                 }
                 R.id.home -> {
                     titles.text = getString(R.string.home)

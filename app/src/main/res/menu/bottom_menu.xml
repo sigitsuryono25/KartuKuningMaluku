@@ -18,7 +18,7 @@
     <item
         android:id="@+id/lowker"
         android:enabled="true"
-        android:icon="@drawable/ic_view_list_24px"
+        android:icon="@drawable/ic_work_outline_24px"
         android:title="@string/lowker"
         app:cnb_iconColor="@color/lowker" />
 

@@ -55,6 +55,9 @@ class HomeFragment : Fragment(), INewsView, View.OnClickListener, ICarouselView 
         mINewsPresenter?.getOneLatestNews()
         mINewsPresenter?.getLowker()
 
+        //manual carouselview
+        loadCarousel()
+
 
         //start shimmer
         shimmer_view_containerlowker.startShimmerAnimation()
@@ -140,7 +143,21 @@ class HomeFragment : Fragment(), INewsView, View.OnClickListener, ICarouselView 
     }
 
     override fun onCarouselFailedLoad(message: String?, code: Int?) {
-        context?.let { Toasty.warning(it, "$message ($code)", Toast.LENGTH_SHORT, true).show() }
+//        context?.let { Toasty.warning(it, "$message ($code)", Toast.LENGTH_SHORT, true).show() }
+    }
+
+    private fun loadCarousel() {
+        val item = arrayListOf(
+            "http://disnakertrans-malukutengah.server4111.com/hacked/uploads/carousel/banner-1.jpg",
+            "http://disnakertrans-malukutengah.server4111.com/hacked/uploads/carousel/banner-2.jpg"
+        )
+        carouselView.setImageListener { position, imageView ->
+            context?.let {
+                Glide.with(it).load(item.get(position))
+                    .apply(RequestOptions.placeholderOf(R.drawable.loader)).into(imageView)
+            }
+        }
+        carouselView.pageCount = item.size
     }
 
 }

@@ -5,6 +5,14 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
+    signingConfigs {
+        release {
+            storeFile file('E:\\StudioProject\\key')
+            storePassword 'sigitsuryono25'
+            keyAlias = 'sigitsuryono25'
+            keyPassword 'sigitsuryono25'
+        }
+    }
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
@@ -77,5 +85,8 @@ dependencies {
 
     //list item view
     implementation 'com.lucasurbas:listitemview:1.1.1'
+
+    //securepreferences
+    implementation 'com.scottyab:secure-preferences-lib:0.1.7'
 
 }
