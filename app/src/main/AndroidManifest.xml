@@ -3,6 +3,8 @@
     package="com.surelabs.auto.kartukuningmaluku">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,10 +15,28 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".detaillayanan.DetailLayananActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".detaillowker.DetailLowker"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".dashboard.MainActivity" />
+        </activity>
+        <activity
+            android:name=".detailnews.DetailNewsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".dashboard.MainActivity" />
+        </activity>
+        <activity
             android:name=".login.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".dashboard.MainActivity">
-
+        <activity
+            android:name=".dashboard.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />

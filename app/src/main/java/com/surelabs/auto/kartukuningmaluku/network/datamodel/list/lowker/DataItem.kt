@@ -1,6 +1,7 @@
 package com.surelabs.auto.kartukuningmaluku.network.datamodel.list.lowker
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 import javax.annotation.Generated
 
 @Generated("com.robohorse.robopojogenerator")
@@ -26,4 +27,4 @@ data class DataItem(
 
     @field:SerializedName("added_on")
     val addedOn: String? = null
-)
+) : Serializable

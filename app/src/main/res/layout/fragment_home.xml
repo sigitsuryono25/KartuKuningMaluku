@@ -24,116 +24,178 @@
             app:strokeWidth="1dp" />
 
         <!--Berita-->
-        <LinearLayout
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="@dimen/padd_marg">
+            android:layout_marginTop="@dimen/padd_marg"
+            android:layout_marginBottom="@dimen/padd_marg">
 
-            <TextView
-                android:id="@+id/lowker"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/padd_marg"
-                android:drawableEnd="@drawable/ic_mobile_app_svgrepo_com"
-                android:drawableTint="@color/home"
-                android:text="@string/lowongan_kerja"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+                android:orientation="vertical"
+                android:padding="@dimen/padd_marg">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <com.facebook.shimmer.ShimmerFrameLayout
-                    android:id="@+id/shimmer_view_containerlowker"
+                <TextView
+                    android:id="@+id/berita"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:orientation="vertical"
-                    shimmer:duration="800">
+                    android:layout_marginBottom="@dimen/padd_marg"
+                    android:drawableEnd="@drawable/ic_arrow_right_alt_24px"
+                    android:drawableTint="@color/home"
+                    android:text="@string/berita"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
 
-                    <include layout="@layout/data_placeholder" />
-
-                </com.facebook.shimmer.ShimmerFrameLayout>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rcLowker"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                    app:spanCount="2" />
+                    android:layout_height="match_parent">
 
-            </RelativeLayout>
-        </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/headlineContainer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/headlineNews"
+                                android:layout_width="match_parent"
+                                android:layout_height="160dp"
+                                android:layout_marginEnd="10dp"
+                                android:contentDescription="@string/descriptionimage"
+                                android:scaleType="centerCrop" />
+
+                            <TextView
+                                android:id="@+id/title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+                            <TextView
+                                android:id="@+id/tanggal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+                            <TextView
+                                android:id="@+id/isi"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rcBerita"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:listitem="@layout/item_list_" />
+
+                    </LinearLayout>
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shimmer_view_containernews"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        shimmer:duration="800">
+
+                        <include layout="@layout/data_placeholder" />
+
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <!--Berita-->
-        <LinearLayout
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padd_marg"
-            android:orientation="vertical"
-            android:padding="@dimen/padd_marg">
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/berita"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/padd_marg"
-                android:drawableEnd="@drawable/ic_mobile_app_svgrepo_com"
-                android:drawableTint="@color/berita"
-                android:text="@string/berita"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+                android:layout_marginTop="@dimen/padd_marg"
+                android:orientation="vertical"
+                android:padding="@dimen/padd_marg">
 
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <com.facebook.shimmer.ShimmerFrameLayout
-                    android:id="@+id/shimmer_view_containernews"
+                <TextView
+                    android:id="@+id/lowker"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:orientation="vertical"
-                    shimmer:duration="800">
+                    android:layout_marginBottom="@dimen/padd_marg"
+                    android:drawableEnd="@drawable/ic_arrow_right_alt_24px"
+                    android:drawableTint="@color/berita"
+                    android:text="@string/lowongan_kerja"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
 
-                    <include layout="@layout/data_placeholder" />
 
-                </com.facebook.shimmer.ShimmerFrameLayout>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rcBerita"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                    app:spanCount="3"
-                    tools:listitem="@layout/item_adapter_home" />
-            </RelativeLayout>
-        </LinearLayout>
+                    android:layout_height="wrap_content">
 
-        <LinearLayout
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shimmer_view_containerlowker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        shimmer:duration="800">
+
+                        <include layout="@layout/data_placeholder" />
+
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcLowker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padd_marg"
-            android:orientation="vertical"
-            android:padding="@dimen/padd_marg">
+            android:layout_marginTop="@dimen/padd_marg">
 
-            <TextView
-                android:id="@+id/lokasi"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/padd_marg"
-                android:drawableEnd="@drawable/ic_compass_svgrepo_com"
-                android:drawableTint="@color/layanan"
-                android:text="@string/peta_lokasi"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+                android:layout_marginTop="@dimen/padd_marg"
+                android:orientation="vertical"
+                android:padding="@dimen/padd_marg">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/location" />
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/lokasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padd_marg"
+                    android:drawableEnd="@drawable/ic_compass_svgrepo_com"
+                    android:drawableTint="@color/layanan"
+                    android:text="@string/peta_lokasi"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:contentDescription="@string/descriptionimage"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/location" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
 
 

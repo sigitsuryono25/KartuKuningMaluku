@@ -16,9 +16,29 @@
     <string name="home">Home</string>
     <string name="akun">Akun</string>
     <string name="layanan">Layanan</string>
-    <string name="berita">Berita</string>
+    <string name="berita">Berita/Pengumuman</string>
     <string name="lowongan_kerja">Lowongan Kerja</string>
     <string name="peta_lokasi">Peta Lokasi</string>
     <string name="keluar">Keluar</string>
     <string name="informasi_akun">Informasi Akun</string>
+    <string name="descriptionimage">descriptionImage</string>
+    <string name="kategori">Kategori</string>
+    <string name="detail_lowongan">Detail Lowongan</string>
+    <string name="detail_berita">Detail Berita</string>
+    <string name="download">Download</string>
+    <string name="detail_layanan">Detail Layanan</string>
+    <string name="lowker">Lowker</string>
+
+    <string-array name="entries_kategori">
+        <item>Berita</item>
+        <item>Pengumuman</item>
+    </string-array>
+
+    <string-array name="entries_halaman">
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>30</item>
+        <item>50</item>
+    </string-array>
 </resources>

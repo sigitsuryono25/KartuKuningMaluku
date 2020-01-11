@@ -8,9 +8,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.surelabs.auto.kartukuningmaluku.R
 import com.surelabs.auto.kartukuningmaluku.network.datamodel.list.news.DataItem
-import kotlinx.android.synthetic.main.item_adapter_home.view.*
+import kotlinx.android.synthetic.main.item_adapter_home.view.imageItem
+import kotlinx.android.synthetic.main.item_adapter_home.view.itemTitle
+import kotlinx.android.synthetic.main.item_list_.view.*
 
 /**
  * A simple [Fragment] subclass.
@@ -24,7 +27,7 @@ class AdapterHomeNews(
         return ViewHolder(
             parent.context,
             LayoutInflater.from(parent.context).inflate(
-                R.layout.item_adapter_home,
+                R.layout.item_list_,
                 parent,
                 false
             ),
@@ -44,10 +47,13 @@ class AdapterHomeNews(
         val lambda: (DataItem?) -> Unit
     ) : RecyclerView.ViewHolder(itemView) {
         var imageview = itemView.imageItem
+        val tanggal = itemView.tanggal
         var title = itemView.itemTitle
         fun onItemBind(item: DataItem?) {
-            Glide.with(context).load(item?.fiturPhoto).into(imageview)
+            Glide.with(context).load(item?.fiturPhoto)
+                .apply(RequestOptions.placeholderOf(R.drawable.loader)).into(imageview)
             title.text = item?.judul
+            tanggal.text = item?.addedOn
             itemView.setOnClickListener {
                 lambda(item)
             }

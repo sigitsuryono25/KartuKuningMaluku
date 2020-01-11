@@ -1,6 +1,7 @@
 package com.surelabs.auto.kartukuningmaluku.network.datamodel.list.news
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 import javax.annotation.Generated
 
 @Generated("com.robohorse.robopojogenerator")
@@ -20,4 +21,4 @@ data class DataItem(
 
     @field:SerializedName("isi")
     val isi: String? = null
-)
+) : Serializable

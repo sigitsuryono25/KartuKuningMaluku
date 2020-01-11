@@ -16,6 +16,13 @@
         app:cnb_iconColor="@color/layanan" />
 
     <item
+        android:id="@+id/lowker"
+        android:enabled="true"
+        android:icon="@drawable/ic_view_list_24px"
+        android:title="@string/lowker"
+        app:cnb_iconColor="@color/lowker" />
+
+    <item
         android:id="@+id/berita"
         android:enabled="true"
         android:icon="@drawable/ic_chrome_reader_mode_24px"

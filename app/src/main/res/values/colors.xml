@@ -8,5 +8,6 @@
     <color name="layanan">#009688</color>
     <color name="berita">#2196F3</color>
     <color name="akun">#FF5722</color>
+    <color name="lowker">#673AB7</color>
     <color name="background">#dddddd</color>
 </resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".detailnews.DetailNewsActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/berita"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
+
+    <TextView
+        android:id="@+id/tanggal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/berita"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption" />
+
+    <ImageView
+        android:id="@+id/fotogambar"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="center" />
+
+    <TextView
+        android:id="@+id/posisi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/padd_marg"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
+
+    <WebView
+        android:id="@+id/isi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
